@@ -1,10 +1,10 @@
 #pragma once
 #include "triangle.h"
-class equilateralTriangle : public Triangle{
+class EquilateralTriangle : public Triangle {
 public:
-	equilateralTriangle();
-	~equilateralTriangle();
-	equilateralTriangle(double);
+	EquilateralTriangle();
+	~EquilateralTriangle();
+	EquilateralTriangle(double);
 	double area();
 	double perimeter();
 };

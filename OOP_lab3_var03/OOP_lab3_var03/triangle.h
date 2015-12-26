@@ -1,5 +1,6 @@
 #pragma once
-class Triangle{
+
+class Triangle {
 private:
 	double side1;
 	double side2;
@@ -12,6 +13,7 @@ public:
 	void setSide1(double);
 	void setSide2(double);
 	void setAngle(double);
+	void printInfo();
 
 	Triangle();
 	~Triangle();
