@@ -1,10 +1,10 @@
 #pragma once
 #include "triangle.h"
-class rightTriangle : public Triangle{
+class RightTriangle : public Triangle {
 public:
-	rightTriangle();
-	~rightTriangle();
-	rightTriangle(double, double);
+	RightTriangle();
+	~RightTriangle();
+	RightTriangle(double, double);
 	double area();
 	double perimeter();
 };

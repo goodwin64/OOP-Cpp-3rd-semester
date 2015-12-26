@@ -1,10 +1,16 @@
 #pragma once
 
+#include <iostream>
+
+using namespace std;
+
 class Segment {
 private:
 	int length;
 public:
+	Segment() {}
 	Segment(int value) {
+		cout << "Creating a segment..." << endl;
 		length = value;
 	}
 
@@ -16,6 +22,11 @@ public:
 
 	int getLength() {
 		return length;
+	}
+
+	void printIt() {
+		cout << "This is a segment." << endl
+			<< "It's length, L = " << getLength() << endl << endl;
 	}
 
 	~Segment() {}

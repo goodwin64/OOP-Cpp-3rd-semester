@@ -7,10 +7,12 @@ using namespace std;
 
 int main() {
 	Segment ab(12);
-	Segment bc(5);
-	Triangle tr(ab, bc);
+	Triangle tr(ab, 12);
+	//Prism pr(tr, 10);
 
-
+	ab.printIt();
+	tr.printIt();
+	
 	system("pause");
 	return 0;
 }
