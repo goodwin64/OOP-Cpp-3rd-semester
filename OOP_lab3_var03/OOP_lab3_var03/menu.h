@@ -1,0 +1,2 @@
+void information();
+void menu();
