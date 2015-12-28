@@ -11,11 +11,19 @@ void menu() {
 	Triangle *triangle;
 
 	while (choice != 4) {
+<<<<<<< HEAD
 		cout << "A triangle will be created. Select it's type:" << endl
 		<< "1. Right." << endl
 		<< "2. Isosceles." << endl
 		<< "3. Equilateral." << endl
 		<< "4. End program & exit." << endl << endl << "\t";
+=======
+		cout << "A triangle will be created. Select it's type:" << endl;
+		cout << "1. Right." << endl;
+		cout << "2. Isosceles." << endl;
+		cout << "3. Equilateral." << endl;
+		cout << "4. End program & exit." << endl << endl << "\t";
+>>>>>>> 3264052573b9413ac69fbdf3fdf256926c272ae9
 
 		cin >> choice;
 
