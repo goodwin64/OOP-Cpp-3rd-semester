@@ -5,7 +5,7 @@
 using namespace std;
 
 class Segment {
-private:
+protected:
 	int length;
 public:
 	Segment() {}

@@ -2,3 +2,4 @@
 
 void printMenu();
 void printInfo();
+void mainAction();

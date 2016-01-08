@@ -5,28 +5,6 @@
 
 using namespace std;
 
-void printMenu() {
-	int choice = 0; // to be continued
-	
-	cout << "(S)tart / (E)nd program" << endl;
-
-	while (choice != 'E') {
-		cin >> choice;
-		switch (choice)
-		{
-		case 'S':
-			// some actions
-			break;
-		case 'E':
-			// some actions
-			break;
-		default:
-			// some actions
-			break;
-		}
-	}
-}
-
 void printInfo() {
 	cout << "\t-------------------------------" << endl
 		<< "\t| Author: Donchenko Max, IP-z41|" << endl
@@ -39,4 +17,39 @@ void printInfo() {
 		<< "Segment (length) -> Triangle(Segment + height) -> Prism (Triangle + height)" << endl
 		<< "and find (if it's possible) the perimeter, area and volume." << endl
 		<< "Data-elements must be protected." << endl << endl;
+}
+
+void mainAction() {
+	Segment ab(12);
+	Triangle tr(ab, 12);
+	Prism pr(tr, 10);
+
+	ab.printIt();
+	tr.printIt();
+	pr.printIt();
+}
+
+void printMenu() {
+	char choice = 'A'; // to be continued
+
+	while (choice != 'E') {
+		cout << "\tprint (I)nfo or (S)tart / (E)nd program: ";
+		cin >> choice;
+		cout << endl << endl;
+		switch (choice)
+		{
+		case 'I':
+			printInfo();
+			break;
+		case 'S':
+			mainAction();
+			break;
+		case 'E':
+			// ignore
+			break;
+		default:
+			cout << "Enter I, S or E:" << endl;
+			break;
+		}
+	}
 }
