@@ -15,11 +15,7 @@ public:
 	void setAngle(double);
 	void printInfo();
 
-	Triangle() {
-		side1 = 0;
-		side2 = 0;
-		angle = 0;
-	}
+	Triangle();
 	~Triangle();
 
 	virtual double area() = 0;

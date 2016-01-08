@@ -2,15 +2,12 @@
 #include <iostream>
 
 using namespace std;
-<<<<<<< HEAD
-=======
 
 Triangle::Triangle() {
 	side1 = 0;
 	side2 = 0;
 	angle = 0;
 }
->>>>>>> 3264052573b9413ac69fbdf3fdf256926c272ae9
 
 Triangle:: ~Triangle() {};
 
@@ -42,12 +39,7 @@ void Triangle::setAngle(double angle1) {
 }
 
 void Triangle::printInfo() {
-<<<<<<< HEAD
 	cout << "The area of triangle, S = " << this->area() << endl
 		<< "It's perimeter, P = " << this->perimeter() << endl;
-=======
-	cout << "The area of triangle, S = " << this->area() << endl;
-	cout << "It's perimeter, P = " << this->perimeter() << endl;
->>>>>>> 3264052573b9413ac69fbdf3fdf256926c272ae9
 }
 
