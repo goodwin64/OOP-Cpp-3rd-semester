@@ -1,7 +1,4 @@
-#include "stdio.h"
-#include <cstdio>
 #include <iostream>
-#include <iomanip>
 
 using namespace std;
 
@@ -16,7 +13,7 @@ public:
 
 	Rect(Rect &other) {
 		float diag = sqrt(pow(other.getWidth(), 2) + pow(other.getHeight(), 2));
-		a = diag; // private "a" получает значение diag
+		a = diag; // private "a" gets a value "diag"
 		b = diag;
 	}
 
