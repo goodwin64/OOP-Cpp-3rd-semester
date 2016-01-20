@@ -1,6 +1,8 @@
 #include <iostream>
 #include <iomanip>	// setw
+#include <cstdlib>
 #include "Vector.h"
+
 
 using namespace std;
 
@@ -11,7 +13,10 @@ using namespace std;
 
 	Vector :: Vector(int size, double* arr) {
 		this->size = size;
-		this->arr = arr;
+		this->arr = new double[size];
+		for (int i = 0; i < size; i++) {
+			this->arr[i] = arr[i];
+		}
 	}
 
 	Vector :: Vector(int size) {
@@ -19,11 +24,13 @@ using namespace std;
 		this->size = size;
 	}
 
-	Vector :: ~Vector() {
-		for (int i = 0; i < size; i++) {
-			arr[i] = 0;
+	Vector :: Vector(initializer_list<double> il) {
+		arr = new double[il.size()];
+		size = il.size();
+		int j = 0;
+		for (auto i : il) {
+			arr[j++] = i;
 		}
-		//delete arr; // throwed an exception so I put a loop here instead
 	}
 
 	int Vector :: getSize() {
@@ -33,17 +40,28 @@ using namespace std;
 	void Vector :: print() {
 		int i = 0;
 		for (i; i < size - 1; i++) {
-			cout << setw(5) << arr[i] << ", ";
+			cout << arr[i] << ", ";
 		}
-		i++;
 		cout << arr[i] << endl;
+	}
+
+	void Vector :: randomInput(int min, int max) {
+		srand(time(NULL));
+		for (int i = 0; i < size; i++) {
+			this->arr[i] = min + (rand() % (max - min + 1));
+		}
 	}
 
 	/* ---OVERLOADING--- */
 
-	Vector Vector :: operator=(Vector &V) {
-		Vector B(V.getSize(), V.arr);
-		return B;
+	Vector& Vector :: operator=(Vector &V) {
+		delete[] arr;
+		this->arr = new double[V.getSize()];
+		for (int i = 0; i < V.getSize(); i++) {
+			this->arr[i] = V.arr[i];
+			this->size = V.size;
+		}
+		return V;
 	}
 
 	Vector& Vector :: operator++() {
@@ -76,4 +94,8 @@ using namespace std;
 			--arr[i];
 		}
 		return *this;
+	}
+
+	Vector :: ~Vector() {
+		delete [] arr;
 	}

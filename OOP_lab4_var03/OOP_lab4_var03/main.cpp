@@ -4,17 +4,21 @@
 using namespace std;
 
 int main() {
-	double arr[10] = {
-		1, 2, 3.4, 5e6, 7e-8,
-		-9.1011, -12, 1, 3.1415, 0
-	};
-	double *p = arr;
+	double *arr = new double[10];
+	for (int i = 0; i < 10; i++) {
+		arr[i] = 0;
+	}
 
-	Vector a(10, p);
+	Vector a(10, arr);
+	Vector b = {1.2,2.3,3.4,4.5};
+
 	a.print();
 	a++;
 	a.print();
-	a--;
+	b.print();
+	b.randomInput(10,25);
+	b.print();
+	a = b;
 	a.print();
 
 	system("pause");
