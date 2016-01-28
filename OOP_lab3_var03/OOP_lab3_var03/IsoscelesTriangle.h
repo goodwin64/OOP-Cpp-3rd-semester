@@ -1,5 +1,6 @@
 #pragma once
 #include "triangle.h"
+
 class IsoscelesTriangle : public Triangle {
 public:
 	IsoscelesTriangle();
@@ -8,4 +9,3 @@ public:
 	double area();
 	double perimeter();
 };
-

@@ -1,5 +1,6 @@
 #pragma once
 #include "triangle.h"
+
 class EquilateralTriangle : public Triangle {
 public:
 	EquilateralTriangle();
@@ -8,4 +9,3 @@ public:
 	double area();
 	double perimeter();
 };
-

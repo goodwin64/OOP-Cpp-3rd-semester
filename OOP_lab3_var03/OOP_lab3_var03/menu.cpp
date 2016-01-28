@@ -104,5 +104,4 @@ void information() {
 		<< "(the data-elements are two sides and the angle between them)." << endl
 		<< "Do the task considering that the work with inheritors will run through the abstract base class object." << endl
 		<< "Methods which have been defined in the base classes should be purely virtual" << endl << endl;
-
 }
